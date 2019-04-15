@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title>视觉重庆--图片管理系统</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="../../html-css/base.css" />
+<link rel="stylesheet" type="text/css" href="../../plug/alert/esayAlert.css" />
+<link rel="stylesheet" href="../../html-css/home/home.css" />
+</head>
+<script src="../../plug/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../plug//alert/esayAlert.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../html-js/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../html-js/home/home.js" type="text/javascript" charset="utf-8"></script>
+<body>
+	<div class="vcont">
+		<div style="width: 100%;margin-top: 16px;">
+			<div class="ed_nkl clearfix">
+				<div class="ed_nkl search clearfix">
+					<!-- <div class="nk_sel">
+						<select class="custom_select" id="search_type_one" style="width: 110px;">
+							<option value="全部">全部</option>
+								<option value="新闻图片">新闻图片</option>
+								<option value="故事图片">故事图片</option>
+								<option value="重要图片">重要图片</option>
+								<option value="艺术图片">艺术图片</option>
+								<option value="历史图片">历史图片</option>
+								<option value="新华图片">新华图片</option>
+								<option value="机构图片">机构图片</option> 
+						</select>
+					</div> -->
+					<div class="ser_box">
+						<input type="text" class="text" placeholder="输入关键字或图片ID"
+							id="searchW_words"> <i class="ico ico8"
+							onclick="searchData()"></i>
+					</div>
+					<!-- <a id="SuperSearch" href="#" class="ser_most">高级检索</a> -->
+				</div>
+
+			</div>
+		</div>
+		<div class="pic_list clearfix">
+			
+		</div>
+	</div>
+	<div id="ModalAlert" class="ui_mask">
+		<div class="ui_box">
+			<div class="close">
+				<i class="ico ico9"></i>
+			</div>
+			<div class="ui_tit"></div>
+			<div class="ui_con hjser">
+				<dl>
+					<dt>关键字/图片ID：</dt>
+					<dd>
+						<input type="text" class="text" placeholder="请输入关键字/图片ID："
+							id="h_text">
+					</dd>
+				</dl>
+				<dl>
+					<dt>搜索类型：</dt>
+					<dd>
+						<select class="sct" id="h_tj_pic" onchange="higth_select_change()">
+							<option value="d_photo_tj" selected="selected">组图</option>
+							<option value="d_photo_pic">单图</option>
+						</select>
+					</dd>
+				</dl>
+				<dl>
+					<dt>布局类型：</dt>
+					<dd>
+						<select class="sct" id="h_pic_type">
+							<option value="0">横幅</option>
+							<option value="1">竖幅</option>
+						</select>
+					</dd>
+				</dl>
+				<dl>
+					<dt>主分类：</dt>
+					<dd>
+						<select class="sct" id="h_type_one">
+
+						</select>
+					</dd>
+				</dl>
+				<dl>
+					<dt>摄影作者：</dt>
+					<dd>
+						<input type="text" class="text" placeholder="请输入摄影作者" id="h_syz">
+					</dd>
+				</dl>
+				<dl>
+					<dt>上传者：</dt>
+					<dd>
+						<input type="text" class="text" placeholder="上传者" id="h_scz">
+					</dd>
+				</dl>
+				<dl>
+					<dt>拍摄时间：</dt>
+					<dd class="clearfix">
+						<input maxlimit="#CreateEndTime" type="text"
+							class="text stmg time_picker_handle" placeholder="开始时间"
+							id="h_sysj_start">
+						<div class="stxt">至</div>
+						<input minlimit="#CreateStartTime" type="text"
+							class="stmg text time_picker_handle" placeholder="结束时间"
+							id="h_sysj_end">
+					</dd>
+				</dl>
+				<dl>
+					<dt>上传时间：</dt>
+					<dd class="clearfix">
+						<input maxlimit="#UploadEndTime" type="text"
+							class="text stmg time_picker_handle" placeholder="开始时间"
+							id="h_scsj_start">
+						<div class="stxt">至</div>
+						<input minlimit="#UploadStartTime" type="text"
+							class="stmg text time_picker_handle" placeholder="结束时间"
+							id="h_scsj_end">
+					</dd>
+				</dl>
+			</div>
+			<div class="ui_btj"></div>
+		</div>
+		Ï
+	</div>
+	<a href="#"class="btn zd"  style="position:fixed; z-index:999; bottom:0px;right:0px;font-size: large;">置&nbsp;顶</a>
+</body>
+
+</html>

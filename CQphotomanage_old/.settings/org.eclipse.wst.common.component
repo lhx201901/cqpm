@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.8.0">
+    <wb-module deploy-name="CQphotomanage">
+        <wb-resource deploy-path="/" source-path="/WebContent"/>
+        <property name="context-root" value="CQphotomanage"/>
+    </wb-module>
+</project-modules>

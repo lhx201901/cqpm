@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title>视觉重庆--图片管理系统</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="../../html-css/base.css" />
+<link rel="stylesheet" href="../../plug/alert/esayAlert.css" />
+<link rel="stylesheet" href="../../html-css/news/pic_edit.css" />
+</head>
+<script src="../../plug/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../plug/alert/esayAlert.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../html-js/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../plug/datepicker/laydate.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../html-js/news/pic_edit_detail.js" type="text/javascript" charset="utf-8"></script>
+
+<body>
+	<div class="vcont">
+		<div class="pic_vst">
+			<div class="vtpdl clearfix">
+				<div class="vt_maximg">
+					<div class="vt_dl_img">
+						<img src="" id="picLyljm">
+					</div>
+				</div>
+				<div class="up_ins clearfix">
+					<div class="clearfix">
+						<div style="width: 330px;" class="fl" id="oldData">
+							<dl>
+								<dt>原图片信息：</dt>
+								<dd></dd>
+							</dl>
+							<dl>
+								<dt>标题：</dt>
+								<dd>
+									<input id="Title" type="text" class="text" placeholder="请输入标题" readonly="readonly">
+								</dd>
+							</dl>
+							<dl>
+								<dt>主说明：</dt>
+								<dd>
+									<textarea id="MainExplain" max=200 class="text limit_text" placeholder="填写主说明" style="height: 100px" readonly="readonly"></textarea>
+									<span class="zsum">0 / 200</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>分说明：</dt>
+								<dd>
+									<textarea id="MinorExplain" max=1000 class="text limit_text" placeholder="填写分说明" style="height: 205px" readonly="readonly"></textarea>
+									<span class="zsum">0 / 1000</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>图片地点：</dt>
+								<dd>
+									<input id="Adress" type="text" class="text" placeholder="请输入图片地点" readonly="readonly">
+								</dd>
+							</dl>
+
+							<dl>
+								<dt>摄影作者：</dt>
+								<dd>
+									<input id="Author" type="text" class="text" placeholder="请输入摄影作者" readonly="readonly">
+								</dd>
+							</dl>
+							<dl>
+								<dt>拍摄时间：</dt>
+								<dd>
+									<input id="CreateTime" type="text" class="text time_picker_handle" readonly="readonly" placeholder="请输入拍摄时间">
+								</dd>
+							</dl>
+							<dl>
+								<dt>图片分类：</dt>
+								<dd class="clearfix" id="picTypes"></dd>
+							</dl>
+							<dl>
+								<dt>图片是否公开：</dt>
+								<dd>
+									<select class="sct" id="picMjSel" disabled="disabled">
+										<option value="">请选择</option>
+										<option value="0">公开</option>
+										<option value="1">非公开</option>
+									</select>
+									<!-- <i class="ico ico10"></i> -->
+								</dd>
+							</dl>
+							<dl>
+								<dt>布局类型：</dt>
+								<dd>
+									<select class="sct" id="picTypeSel" disabled="disabled">
+										<option value="">请选择</option>
+										<option value="0">横幅</option>
+										<option value="1">竖幅</option>
+									</select>
+									<!-- <i class="ico ico10"></i> -->
+								</dd>
+							</dl>
+							<dl>
+								<dt>关键字：</dt>
+								<dd>
+									<div id="KeywordTips" class="keyword"></div>
+								</dd>
+							</dl>
+						</div>
+						<div class="fl ml30" id="newData">
+							<dl>
+								<dt>修改请求信息：</dt>
+								<dd></dd>
+							</dl>
+							<dl>
+								<dt>标题：</dt>
+								<dd>
+									<input id="Title" type="text" class="text" placeholder="请输入标题" readonly="readonly">
+								</dd>
+							</dl>
+							<dl>
+								<dt>主说明：</dt>
+								<dd>
+									<textarea id="MainExplain" max=200 class="text limit_text" placeholder="填写主说明" style="height: 100px" readonly="readonly"></textarea>
+									<span class="zsum">0 / 200</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>分说明：</dt>
+								<dd>
+									<textarea id="MinorExplain" max=1000 class="text limit_text" placeholder="填写分说明" style="height: 205px" readonly="readonly"></textarea>
+									<span class="zsum">0 / 1000</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>图片地点：</dt>
+								<dd>
+									<input id="Adress" type="text" class="text" placeholder="请输入图片地点" readonly="readonly">
+								</dd>
+							</dl>
+
+							<dl>
+								<dt>摄影作者：</dt>
+								<dd>
+									<input id="Author" type="text" class="text" placeholder="请输入摄影作者" readonly="readonly">
+								</dd>
+							</dl>
+							<dl>
+								<dt>拍摄时间：</dt>
+								<dd>
+									<input id="CreateTime" type="text" class="text time_picker_handle" readonly="readonly" placeholder="请输入拍摄时间">
+								</dd>
+							</dl>
+							<dl>
+								<dt>图片分类：</dt>
+								<dd class="clearfix" id="picTypes"></dd>
+							</dl>
+							<dl>
+								<dt>图片是否公开：</dt>
+								<dd>
+									<select class="sct" id="picMjSel" disabled="disabled">
+										<option value="">请选择</option>
+										<option value="0">公开</option>
+										<option value="1">非公开</option>
+									</select>
+									<!-- <i class="ico ico10"></i> -->
+								</dd>
+							</dl>
+							<dl>
+								<dt>布局类型：</dt>
+								<dd>
+									<select class="sct" id="picTypeSel" disabled="disabled">
+										<option value="">请选择</option>
+										<option value="0">横幅</option>
+										<option value="1">竖幅</option>
+									</select>
+									<!-- <i class="ico ico10"></i> -->
+								</dd>
+							</dl>
+							<dl>
+								<dt>关键字：</dt>
+								<dd>
+									<div id="KeywordTips" class="keyword" style="width:308px;"></div>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="aboutXx">
+						<dl>
+							<dt></dt>
+							<dd>修改备注：<span id="sendRemark"></span></dd>
+							<dd>发送时间：<span id="sendTime"></span></dd>
+							<dd>发送人：<span id="picScz"></span></dd>
+							<dd>编辑备注：<span id="editRemark"></span></dd>
+							<dd>编辑时间：<span id="editTime"></span></dd>
+							<dd>编辑人：<span id="editUserName"></span></dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div id="ModalAlert" class="ui_mask">
+		<div class="ui_box">
+			<div action="close_modal" class="close">
+				<i class="ico ico9"></i>
+			</div>
+			<div class="ui_tit"></div>
+			<div class="ui_con innox"></div>
+			<div class="ui_btj" style="text-align: center;"></div>
+		</div>
+	</div>
+	<a href="#"class="btn zd"  style="position:fixed; z-index:999; bottom:0px;right:0px;font-size: large;">置&nbsp;顶</a>
+</body>
+
+</html>

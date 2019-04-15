@@ -1,0 +1,130 @@
+@charset "utf-8";
+/* CSS Document */
+.up_ins {
+	width: 360px;
+	background: #fff;
+	position: absolute;
+	height: 100%;
+	top: 0;
+	right: 0
+}
+
+.up_ins dl {
+	margin: 20px auto
+}
+
+.up_ins dt {
+	line-height: 22px;
+	padding-bottom: 12px
+}
+
+.up_ins dd {
+	position: relative
+}
+
+.up_ins dd .text {
+	padding: 8px 10px;
+	font-size: 14px;
+	border: 1px solid #ddd;
+	width: 220px
+}
+
+.user_ed_msg {
+	border-bottom: 1px solid #ddd;
+	float: left;
+}
+
+.user_ed_msg .up_ins {
+	background: none;
+	position: relative;
+	top: auto;
+	right: auto
+}
+
+.user_ed_msg dl {
+	position: relative;
+}
+
+.user_ed_msg dt {
+	float: left;
+	width: 80px;
+	text-align: right;
+	padding: 5px 0 0
+}
+
+.user_ed_msg dd {
+	margin-left: 90px
+}
+
+.user_ed_msg .ued_w {
+	width: 395px
+}
+
+.mp_instu {
+	padding: 40px 40px 20px
+}
+
+.mp_seld dl {
+	margin-bottom: 15px
+}
+
+.mp_seld dt {
+	float: left;
+	width: 135px;
+	text-align: right;
+	padding: 5px 0 0
+}
+
+.mp_seld dd {
+	margin-left: 145px;
+	line-height: 28px
+}
+
+.mp_seld dd .js_ak a {
+	display: inline-block;
+	padding: 5px 15px;
+	border: 1px solid #ddd;
+	background: #fff;
+	color: #666;
+	margin: 0 10px 10px 0
+}
+
+.mp_seld dd .js_ak a:hover {
+	background: #f24143;
+	color: #fff
+}
+
+.mp_seld dd .js_ak input:checked+a {
+	background: #f24143;
+	color: #fff;
+}
+
+.dj_ns {
+	padding-left: 24px
+}
+
+.dj_ni {
+	margin-bottom: 10px
+}
+
+.dj_ns span {
+	display: inline-block;
+	margin: 5px 10px 5px 0
+}
+.moduleTree_div{
+	width: 25%;
+	height: 400px;
+	border: 5px solid #b8b8b8; 
+	float: left;
+	margin-top: 20px;
+	border-radius:10px;
+}
+.userTress_div{
+	width: 25%;
+	height: 400px;
+	border: 5px solid #b8b8b8; 
+	float: left;
+	margin-left: 20px;
+	margin-top: 20px;
+	border-radius:10px;
+}

@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title>视觉重庆--图片管理系统</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="../../html-css/base.css" />
+<link rel="stylesheet" type="text/css" href="../../plug/alert/esayAlert.css" />
+<link rel="stylesheet" type="text/css" href="../../html-css/user/addUser.css" />
+</head>
+<script src="../../plug/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../plug/alert/esayAlert.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../html-js/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../html-js/user/addUser.js" type="text/javascript" charset="utf-8"></script>
+<body>
+	<div class="vcont">
+		<div class="user_ed_msg">
+			<div class="up_ins up_ins2 clearfix">
+				<div class="clearfix">
+					<div class="ued_w">
+
+						<dl class="clearfix">
+							<dt>用户名：</dt>
+							<dd>
+								<input type="text" class="text" placeholder="请输入用户名" id="login_name">
+							</dd>
+						</dl>
+						<dl class="clearfix">
+							<dt>密码：</dt>
+							<dd>
+							 	<input type="text" class="text" placeholder="请输入密码" id="pwd">
+							</dd>
+						</dl>
+						<dl class="clearfix">
+							<dt>存储空间：</dt>
+							<dd>
+								<input type="text" class="text" placeholder="不设置默认占用单位未分配空间" id="userMemorySize" onkeyup='if(!/^\d+(\.\d{0,2})?$/.test(this.value)){this.value=&quot;&quot;;}' 
+								onafterpaste='if(!/^\\d+(\.\d{0,2})?$/.test(this.value)){this.value="";}'><span STYLE="color:red;">(GB)</span>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mp_instu">
+			<div class="mp_seld">
+				<dl class="clearfix">
+					<dt>角色：</dt>
+					<dd>
+						<div class="js_ak">
+							<!-- <label>
+								<input type="radio" name="role" hidden="hidden" checked="checked" value="role1"/>
+								<a>普通编辑</a>
+							</label>
+							<label>
+								<input type="radio" name="role" hidden="hidden" value="role2" />
+								<a>实习编辑</a></label> 
+							<label>
+								<input type="radio" name="role" hidden="hidden" value="role3" />
+								<a>摄影记者</a>
+							</label> 
+							<label>
+								<input type="radio" name="role" hidden="hidden" value="role4" />
+								<a>摄影主编</a>
+							</label> 
+							<label>
+								<input type="radio" name="role" hidden="hidden" value="role5" />
+								<a>图片编辑</a>
+							</label> 
+							<label>
+								<input type="radio" name="role" hidden="hidden" value="role6" />
+								<a>通讯员</a>
+							</label> -->
+						</div>
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>资源权限：</dt>
+					<dd>
+						<div class="dj_ns">
+							<p>查看</p>
+							<div class="dj_ns" id="choose_search">
+								<span>
+									<label class="custom_checkbox">
+									<input id="AllChecked" hidden="hidden" type="checkbox"  value="all"/>
+									<div></div>全部</label>
+								</span> 
+								<!-- <span>
+									<label class="custom_checkbox">
+									<input name="imageType" hidden="hidden" type="checkbox"  value="xwtp"/>
+									<div></div>新闻图片</label>
+								</span>
+								<span>
+									<label class="custom_checkbox">
+									<input name="imageType" hidden="hidden" type="checkbox"  value="gstp"/>
+									<div></div>图片故事</label>
+								</span>
+								<span>
+									<label class="custom_checkbox">
+									<input name="imageType" hidden="hidden" type="checkbox"  value="zytp"/>
+									<div></div>重要图片</label>
+								</span> 
+								<span>
+									<label class="custom_checkbox">
+									<input name="imageType" hidden="hidden" type="checkbox"  value="ystp"/>
+									<div></div>艺术图片</label>
+								</span> 
+								<span>
+									<label class="custom_checkbox">
+									<input name="imageType" hidden="hidden" type="checkbox"  value="lstp"/>
+									<div></div>历史图片</label>
+								</span> 
+								<span>
+									<label class="custom_checkbox">
+									<input name="imageType" hidden="hidden" type="checkbox"  value="xhtp"/>
+									<div></div>新华图片</label>
+								</span>
+								<span>
+									<label class="custom_checkbox">
+									<input name="imageType" hidden="hidden" type="checkbox"  value="qytp"/>
+									<div></div>企业图片</label>
+								</span> -->
+							</div>
+						</div>
+						<div class="dj_ns">
+							<p>检索</p>
+							<div class="dj_ns">
+								<span>
+									<label class="custom_checkbox">
+										<input hidden="hidden" name="searchFun" type="checkbox"  value="searchMyself"/>
+										<div></div>自己上传的图片
+									</label>
+								</span>
+								 <span>
+										<label class="custom_checkbox">
+											<input hidden="hidden" name="searchFun" type="checkbox" value="searchOtherPubilc"/>
+											<div></div>其他公开的图片
+										</label>
+								</span>
+								<span>
+										<label class="custom_checkbox">
+											<input hidden="hidden" name="searchFun" type="checkbox" value="searchOtherPrivate"/>
+											<div></div>其他非公开的图片
+										</label>
+								</span>
+							</div>
+						</div>
+						<div class="dj_ns">
+							<p>下载</p>
+							<div class="dj_ns">
+								<span>
+									<label class="custom_checkbox">
+										<input hidden="hidden" name="downFun" type="checkbox"  value="downMyself"/>
+										<div></div>自己上传的图片
+									</label>
+								</span>
+								 <span>
+										<label class="custom_checkbox">
+											<input hidden="hidden" name="downFun" type="checkbox" value="downOtherPubilc"/>
+											<div></div>其他公开的图片
+										</label>
+								</span>
+								<span>
+										<label class="custom_checkbox">
+											<input hidden="hidden" name="downFun" type="checkbox" value="downOtherPrivate"/>
+											<div></div>其他非公开的图片
+										</label>
+								</span>
+							</div>
+						</div>
+						<div class="dj_ns">
+							<p>编辑</p>
+							<div class="dj_ns">
+								<span><label class="custom_checkbox"><input
+										hidden="hidden" name="edit" type="radio" value="1"/>
+									<div></div>有</label></span> <span><label class="custom_checkbox"><input
+										hidden="hidden" name="edit" type="radio" value="0" checked="checked"/>
+									<div></div>无</label></span>
+							</div>
+						</div>
+						<div class="dj_ns">
+							<p>进入方正</p>
+							<div class="dj_ns">
+								<span><label class="custom_checkbox"><input
+										hidden="hidden" name="entry" type="radio" value="1"/>
+									<div></div>有</label></span> <span><label class="custom_checkbox"><input
+										hidden="hidden" name="entry" type="radio" value="0" checked="checked"/>
+									<div></div>无</label></span>
+							</div>
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<div class="mp_seld">
+				<dl class="clearfix">
+					<dt></dt>
+					<dd>
+						<div class="mt30">
+							<a href="#" class="btn btn_ok" onclick="addSave()">保存</a> 
+							<a href="#" class="btn ml10" onclick="test()">取消</a>
+						</div>
+					</dd>
+				</dl>
+			</div>
+
+		</div>
+	</div>
+	<div id="ModalAlert" class="ui_mask">
+		<div class="ui_box">
+			<div action="close_modal" class="close">
+				<i class="ico ico9"></i>
+			</div>
+			<div class="ui_tit"></div>
+			<div class="ui_con innox"></div>
+			<div class="ui_btj" style="text-align: center;"></div>
+		</div>
+	</div>
+	<a href="#"class="btn zd"  style="position:fixed; z-index:999; bottom:0px;right:0px;font-size: large;">置&nbsp;顶</a>
+</body>
+</html>

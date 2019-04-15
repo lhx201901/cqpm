@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title>视觉重庆--图片管理系统</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="../../html-css/base.css" />
+<link rel="stylesheet" type="text/css" href="../../plug/alert/esayAlert.css" />
+<link rel="stylesheet" href="../../html-css/myupload/myupload.css" />
+</head>
+<script src="../../plug/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../plug//alert/esayAlert.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../html-js/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../html-js/pageToDiv.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../html-js/myupload/tjDetail.js" type="text/javascript" charset="utf-8"></script>
+<body>
+	<div class="vcont">
+		<div class="ed_gkp">
+			<div class="ed_nkl clearfix">
+				<span class="nk_ti">
+					<label>
+						<input id="AllCheck" type="checkbox">
+						全选
+					</label>
+				</span>
+				<div class="ed_msl ml20">
+					<a id="Delete" href="javascript:void(0)">删除</a>
+				</div>
+				
+				<div class="ed_msl ml20" id="picMjSel">
+					<a class="cur" title="0">公开</a>
+					<a title="1">非公开</a>
+				</div>
+
+				<span class="nk_ti ml40">当前页图片数量：</span>
+				<div class="nk_sel nk_sel3">
+					<input class="text" type="text" value="30" id="showPageSize">
+					<i class="ico ico26"></i>
+					<div class="sr_sl_most">
+						<ul>
+							<li>
+								<a href="#">10</a>
+							</li>
+							<li>
+								<a href="#">20</a>
+							</li>
+							<li>
+								<a href="#">30</a>
+							</li>
+							<li>
+								<a href="#">50</a>
+							</li>
+							<li>
+								<a href="#">100</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="search clearfix">
+				<!-- 					<div class="ser_sel">
+						<input class="text search_text" type="text" value="全部" id="picTypeOneSel">
+						<div class="sr_sl_most">
+							<ul>
+								<li>
+									<a>新闻图片</a>
+								</li>
+								<li>
+									<a>故事图片</a>
+								</li>
+								<li>
+									<a>重要图片</a>
+								</li>
+								<li>
+									<a href="#">艺术图片</a>
+								</li>
+								<li>
+									<a href="#">历史图片</a>
+								</li>
+								<li>
+									<a href="#">新华图片</a>
+								</li>
+								<li>
+									<a href="#">机构图片</a>
+								</li>
+							</ul>
+						</div>
+					</div> -->
+				<div class="ser_box">
+					<input type="text" class="text" placeholder="输入关键字或图片ID" id="picGjz">
+					<i class="ico ico8" onclick="searchData()"></i>
+				</div>
+				<!-- <a href="#" class="ser_most">高级检索</a> -->
+			</div>
+		</div>
+		<div class="pic_list clearfix">
+			<div class="pic_li my_up_img">
+				<ul id="ImageList" class="clearfix">
+					<!-- 						<li>
+							<label>
+							<input hidden="hidden" type="checkbox" name="images" />
+							<div class="picn">
+								<div class="picn_nbx">
+									<p><img src="images/inx_img_05.jpg"></p>
+									<span style="background:url(images/inx_img_05.jpg)"></span>
+									<div class="bg"></div>
+									<div class="ed_sel_ok"><i class="ico ico20"></i></div>
+									<div class="up_txt_ied">
+										<a class="edit_item"><i class="ico ico21 mr5"></i>编辑</a>
+										<a class="delete_item"><i class="ico ico22 mr5"></i>删除</a>
+									</div>
+								</div>
+							</div>
+							</label>
+						</li> -->
+				</ul>
+			</div>
+			<div class="page">
+				<a class="page-operate page-first">首页</a>
+				<a class="page-operate page-pre">上一页</a>
+				<span>当前第</span>
+				<span class="page-current">1</span>
+				<span>页共</span>
+				<span class="page-all">1</span>
+				<span>页</span>
+				<a class="page-operate page-next">下一页</a>
+				<a class="page-operate page-last">尾页</a>
+				<input type="text" class="text" id="pageText" onkeyup="value=value.replace(/[^\d]/g,'')">
+				<button class="go">GO</button>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="ModalAlert" class="ui_mask">
+		<div class="ui_box">
+			<div class="close">
+				<i class="ico ico9"></i>
+			</div>
+			<div class="ui_tit"></div>
+			<div class="ui_con"></div>
+			<div class="ui_btj"></div>
+		</div>
+		Ï
+	</div>
+	<a href="#"class="btn zd"  style="position:fixed; z-index:999; bottom:0px;right:0px;font-size: large;">置&nbsp;顶</a>
+</body>
+
+</html>

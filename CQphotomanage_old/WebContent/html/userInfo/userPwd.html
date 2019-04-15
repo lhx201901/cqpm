@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title>密码更改</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="../../html-css/base.css" />
+<link rel="stylesheet" type="text/css" href="../../plug/alert/esayAlert.css" />
+<link rel="stylesheet" type="text/css" href="../../html-css/userInfo/userPwd.css" />
+</head>
+<script src="../../plug/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../plug/alert/esayAlert.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../html-js/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../html-js/userInfo/userPwd.js" type="text/javascript" charset="utf-8"></script>
+<body>
+	<div class="vcont">
+		<div class="user_info">
+			<div class="uiti">密码更改</div>
+			<div class="dbinox">
+				<dl>
+					<dt>原密码：</dt>
+					<dd>
+						<input type="text" class="text" placeholder="请输入原密码" id="oldPwd">
+						<div class="ts_msg" style="display: none">* 原密码输入错误</div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>新密码：</dt>
+					<dd>
+						<input type="text" class="text" placeholder="请输入新密码" id ="newPwd">
+						<div class="ts_msg"></div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>确认密码：</dt>
+					<dd>
+						<input type="text" class="text" placeholder="请确认密码" id="newPwd2">
+						<div class="ts_msg" style="display: none">* 两次输入密码不一致</div>
+					</dd>
+				</dl>
+				<dl>
+					<dt></dt>
+					<dd>
+						<div class="mt40">
+							<a href="#" class="btn btn_ok" onclick="editSave()">保存修改</a> 
+							<a href="#" class="btn ml10" onclick="restData()">重置</a>
+						</div>
+					</dd>
+				</dl>
+			</div>
+
+		</div>
+	</div>
+		<div id="ModalAlert" class="ui_mask">
+		<div class="ui_box">
+			<div action="close_modal" class="close">
+				<i class="ico ico9"></i>
+			</div>
+			<div class="ui_tit"></div>
+			<div class="ui_con innox"></div>
+			<div class="ui_btj" style="text-align: center;"></div>
+		</div>
+	</div>
+	<a href="#"class="btn zd"  style="position:fixed; z-index:999; bottom:0px;right:0px;font-size: large;">置&nbsp;顶</a>
+</body>
+
+</html>

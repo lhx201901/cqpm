@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title>分类管理</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="../../html-css/base.css" />
+<link rel="stylesheet" type="text/css" href="../../plug/ztree/zTreeStyle/zTreeStyle.css" />
+<link rel="stylesheet" type="text/css" href="../../plug/table/esayTable.css" />
+<link rel="stylesheet" type="text/css" href="../../plug/alert/esayAlert.css" />
+<link rel="stylesheet" type="text/css" href="../../html-css/narClassify/narClassify.css" />
+</head>
+<script src="../../plug/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../plug/ztree/jquery.ztree.core.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../plug/table/esayTable.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../plug//alert/esayAlert.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../html-js/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../html-js/pageBtn.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../html-js/narClassify/narClassify.js" type="text/javascript" charset="utf-8"></script>
+<body>
+	<div class="vcont">
+
+		<div class="gc_vst"> 
+			<div id="TreeBox" class="gc_nav" style="">
+				<div class="zTreeDemoBackground left">
+					<ul id="narClassifyTree" class="ztree"></ul>
+				</div>
+			
+			</div>
+			
+			<div style="width: 79%;float: left;margin-left: 1%;">
+				<div class="ed_nkl clearfix">
+					<div class="ed_msl">
+						<a href="#" onclick="add()">新增</a> <a href="#"
+							onclick="beathDeleteUser()">批量删除</a> <!-- <a href="#"
+							onclick="test123()">测试动态</a> -->
+					</div>
+
+				</div>
+				<div class="search clearfix">
+					<div class="ser_box">
+						<input type="text" class="text" placeholder="输入关键字" id="search_words"> <i class="ico ico8" onclick="searchThis()"></i>
+					</div>
+				</div>
+				<div id="TableBox" class="gc_con"></div>
+				<div class="page">
+					<div style="float: left;">
+						<span>共<span id="total_records">200</span>条记录
+						</span> <span>每页显示</span> <select class="sel" id="page_size"
+							onchange="page_size_change()">
+							<option value="1">1</option>
+							<option value="10">10</option>
+							<option value="20" selected="selected">20</option>
+							<option value="50">50</option>
+							<option value="100">100</option>
+						</select> <span>条记录</span>
+					</div>
+					<div style="float: right;">
+						<a href="#" onclick="first_page()">首页</a> <a href="#"
+							onclick="last_page()">上一页</a> <span>当前第<span
+							id="this_page">1</span>页
+						</span> <span>共<span id="total_page">200</span>页
+						</span> <a href="#" onclick="next_page()">下一页</a> <a href="#"
+							onclick="end_page()">尾页</a> <input type="text" class="text"
+							id="go_page_text">
+						<button class="go" onclick="go_page()">GO</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<div id="ModalAlert" class="ui_mask">
+		<div class="ui_box">
+			<div action="close_modal" class="close">
+				<i class="ico ico9"></i>
+			</div>
+			<div class="ui_tit"></div>
+			<div class="ui_con innox"></div>
+			<div class="ui_btj" style="text-align: center;"></div>
+		</div>
+	</div>
+	<a href="#"class="btn zd"  style="position:fixed; z-index:999; bottom:0px;right:0px;font-size: large;">置&nbsp;顶</a>
+</body>
+
+</html>

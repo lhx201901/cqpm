@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title>图片管理系统</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="../../html-css/base.css" />
+<link rel="stylesheet" href="../../plug/alert/esayAlert.css" />
+<link rel="stylesheet" href="../../html-css/index/index.css" />
+</head>
+<body class="main_panel">
+	<div>
+		<div class="vtop">
+			<div id="Tab" class="tab_box">
+				<div id="TabBox" class="vtab_sel"></div>
+				<div class="tab_arrow tab_arrow_left">
+					<img src="../../images/left.png" />
+				</div>
+				<div class="tab_arrow tab_arrow_right">
+					<img src="../../images/right.png" />
+				</div>
+			</div>
+			<div class="vmsg_edp">
+				<!--<div class="ed"><a href="#" class="home"></a></div>-->
+				<!-- <div class="ed">
+					<a  href="../../html/news/news.html?pid=news" id="news" class="msg"><span style="display:none;">消息列表</span><em class="sm">3</em></a>
+				</div> -->
+				<!--修改了这一块在 2018-10-11-->
+				<div class="ed" style="padding: 0 15px;">
+					<div style="padding: 0;" class="info">
+					<a href="#" class="msg"><em class="sm" id="totleNum">0</em></a>
+					<div class="most_ed_mg mesage_down_menu">
+							<ul class="open_window_link">
+								<li>
+									<a href="../../html/news/notices.html?pid=notices" id="notices">
+										<span class="message_text">系统消息</span><em id="noNum">0</em>
+									</a>
+								</li>
+								<li>
+									<a href="../../html/news/news.html?pid=news" id="news">
+										<span class="message_text">修改请求</span><em id="editNum">0</em>
+									</a>
+								</li>
+								<li>
+									<a href="../../html/news/updateNews.html?pid=update" id="update">
+										<span class="message_text">修改消息</span><em id="updateNum">0</em>
+									</a>
+								</li>
+								<li>
+									<a href="../../html/news/deleteNews.html?pid=delete" id="delete">
+										<span class="message_text">删除消息</span><em id="deleteNum">0</em>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--修改了这一块在 2018-10-11 end-->
+				<div class="ed">
+					<div class="info">
+						<dl class="clearfix">
+							<dt>
+								<img src="../../images/mrimg.png" width="36" height="36">
+							</dt>
+							<dd>
+								<a id="realName" class="name">王俊华</a>
+							</dd>
+						</dl>
+						<div class="most_ed_mg">
+							<ul class="open_window_link">
+								<li><a href="../../html/userInfo/userInfo.html?pid=userInfo" id = "userInfo"><span>个人信息</span><em></em></a>
+								</li>
+								<li><a href="../../html/userInfo/userPwd.html?pid=userPwd" id = "userPwd"><span>账号密码</span><em></em></a>
+								</li>
+								<li><a href="../../html/myupload/myupload.html?pid=myupload" id = "myupload"><span>我的上传</span><em></em></a>
+								</li>
+								<li><a href="../../html/myDownload/myDownload.html?pid=myDownload" id="myDownload"><span>我的下载</span><em></em></a></li>
+								<li><a href="../../html/myFinance/myFinance.html?pid=myFinanced" id="myFinance"><span>我的财务</span><em></em></a>
+								</li>
+								<li><a onclick="loginOut()">退出登录<em></em></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="magic_mask"></div>
+		</div>
+		<div class="nav_ts">
+			<div class="cqsj_logo">
+				<h1>
+					<a href="#" class="logo">视觉重庆</a>
+				</h1>
+			</div>
+			<div id="SideNavBox" class="nav_scroll">
+				<!--<div class="nav_box">
+						<div class="show_mt nav_ti"><i class="ico ico1"></i>图片库<i class="ico ico5"></i></div>
+						<ul class="open_window_link">
+							<li class="cur">
+								<a href="home.html"><span>全部图片</span><i class="ico ico6"></i></a>
+							</li>
+							<li>
+								<a href="image_list.html?type=1"><i class="ico ico1"></i><span>新闻图片</span><i class="ico ico6"></i></a>
+							</li>
+							<li>
+								<div class="nav_ti">三级菜单点这<i class="ico ico5"></i></div>
+								<ul class="open_window_link">
+									<li>
+										<a href="home.html"><span>子菜单</span><i class="ico ico6"></i></a>
+									</li>
+									<li>
+										<div class="nav_ti">四级菜单点这<i class="ico ico5"></i></div>
+										<ul class="open_window_link">
+											<li>
+												<a href="home.html"><span>子菜单</span><i class="ico ico6"></i></a>
+											</li>
+											<li>
+												<div class="nav_ti">五级菜单点这<i class="ico ico5"></i></div>
+												<ul class="open_window_link">
+													<li>
+														<a href="home.html"><span>子菜单</span><i class="ico ico6"></i></a>
+													</li>
+													<li>
+														<div class="nav_ti">六级菜单点这<i class="ico ico5"></i></div>
+														<ul class="open_window_link">
+															<li>
+																<a href="home.html"><span>子菜单</span><i class="ico ico6"></i></a>
+															</li>
+															<li>
+																<a href="home.html"><span>子菜单</span><i class="ico ico6"></i></a>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="image_list.html?type=2"><span>图片故事</span><i class="ico ico6"></i></a>
+							</li>
+							<li>
+								<a href="image_list.html?type=3"><span>重要图片</span><i class="ico ico6"></i></a>
+							</li>
+							<li>
+								<a href="image_list.html?type=4"><span>艺术图片</span><i class="ico ico6"></i></a>
+							</li>
+							<li>
+								<a href="image_list.html?type=5"><span>历史图片</span><i class="ico ico6"></i></a>
+							</li>
+							<li>
+								<a href="image_list.html?type=6"><span>新华图片</span><i class="ico ico6"></i></a>
+							</li>
+							<li>
+								<a href="image_list.html?type=7"><span>机构图片</span><i class="ico ico6"></i></a>
+							</li>
+						</ul>
+					</div>
+					<div class="nav_box">
+						<div class="nav_ti"><i class="ico ico2"></i>功能<i class="ico ico5"></i></div>
+						<ul class="open_window_link">
+							<li>
+								<a href="upload.html"><span>上传图片</span><i class="ico ico6"></i></a>
+							</li>
+							<li>
+								<a href="text_temp.html"><span>文字模版</span><i class="ico ico6"></i></a>
+							</li>
+							<li>
+								<a href="my_choose.html"><span>我的预选</span><i class="ico ico6"></i></a>
+							</li>
+						</ul>
+					</div>
+					<div class="nav_box">
+						<div class="nav_ti"><i class="ico ico3"></i>管理<i class="ico ico5"></i></div>
+						<ul class="open_window_link">
+							<li>
+								<a href="push_manage.html"><span>推送管理</span><i class="ico ico6"></i></a>
+							</li>
+							<li>
+								<a href="home.html"><span>图片管理</span><i class="ico ico6"></i></a>
+							</li>
+							<li>
+								<a href="column_manage.html"><span>栏目管理</span><i class="ico ico6"></i></a>
+							</li>
+							<li>
+								<a href="user_manage.html"><span>用户管理</span><i class="ico ico6"></i></a>
+							</li>
+							<li>
+								<a href="home.html"><span>角色管理</span><i class="ico ico6"></i></a>
+							</li>
+							<li>
+								<a href="my_affairs.html"><span>财务管理</span><i class="ico ico6"></i></a>
+							</li>
+							<li>
+								<a href="my_message.html"><span>消息管理</span><i class="ico ico6"></i></a>
+							</li>
+						</ul>
+					</div>
+					<div class="nav_box">
+						<div class="nav_ti"><i class="ico ico4"></i>设置<i class="ico ico5"></i></div>
+						<ul class="open_window_link">
+							<li>
+								<a href="home.html"><span>参数设置</span><i class="ico ico6"></i></a>
+							</li>
+							<li>
+								<a href="home.html"><span>模块设置</span><i class="ico ico6"></i></a>
+							</li>
+							<li>
+								<a href="home.html"><span>字典设置</span><i class="ico ico6"></i></a>
+							</li>
+						</ul>
+					</div>-->
+			</div>
+			<div class="magic_mask"></div>
+		</div>
+		<div id="IframeBox" class="main"></div>
+	</div>
+	<div id="ModalAlert" class="ui_mask">
+		<div class="ui_box" style="margin-left:0px;">
+			<div action="close_modal" class="close">
+				<i class="ico ico9"></i>
+			</div>
+			<div class="ui_tit"></div>
+			<div class="ui_con innox"></div>
+			<div class="ui_btj" style="text-align: center;"></div>
+		</div>
+	</div>
+	
+</body>
+<script src="../../plug/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../plug/alert/esayAlert.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../html-js/index/index.js" type="text/javascript" charset="utf-8"></script>
+</html>

@@ -1,0 +1,22 @@
+@charset "utf-8"; 
+/* CSS Document */
+
+.login{background:url(../../images/loginbg.jpg) no-repeat; background-size:cover; position:absolute; top:0; left:0; width:100%; height:100%}
+
+/*登录注册弹窗*/
+.login_bx{background:#fff; position:fixed; top:50%; left:50%; overflow:hidden; width:500px; margin:-250px 0 0 -250px; /* z-index:30; */
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+border-radius:10px;
+}
+.login_bx .img{position:absolute; top:0; left:0}
+.loint{padding:60px 40px 50px; position:relative}
+.loint .logooin{text-align:center;  font-size:30px}
+.loint .return{position:absolute; top:15px; left:15px; color:#999}
+.lina{border-bottom:1px solid #ddd; padding-bottom:15px; position:relative}
+.lina .text{width:100%; border:0; padding:0; margin:0; height:24px; font-size:14px}
+.lina .wdts{position:absolute; top:50%; right:0; margin-top:-20px}
+.lina .wdts a{color:#3573f5}
+.lina .wdts a:hover{color:#f24143}
+.lobtn{padding:50px 0 0}
+.lobtn .btn{display:block; width:100%; background:#f24143; color:#fff; padding:15px 0; font-size:16px;cursor:pointer;}

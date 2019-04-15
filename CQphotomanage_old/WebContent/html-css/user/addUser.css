@@ -1,0 +1,117 @@
+@charset "utf-8";
+/* CSS Document */
+.up_ins {
+	padding: 0 20px;
+	width: 360px;
+	background: #fff;
+	position: absolute;
+	height: 100%;
+	top: 0;
+	right: 0
+}
+
+.up_ins dl {
+	margin: 20px auto
+}
+
+.up_ins dt {
+	line-height: 22px;
+	padding-bottom: 12px
+}
+
+.up_ins dd {
+	position: relative
+}
+
+.up_ins dd .text {
+	padding: 8px 10px;
+	font-size: 14px;
+	border: 1px solid #ddd;
+	width: 338px
+}
+
+.user_ed_msg {
+	padding: 0 40px;
+	border-bottom: 1px solid #ddd
+}
+
+.user_ed_msg .up_ins {
+	width: 1000px;
+	background: none;
+	padding: 20px;
+	position: relative;
+	top: auto;
+	right: auto
+}
+
+.user_ed_msg dl {
+	width: 360px;
+	position: relative;
+}
+
+.user_ed_msg dt {
+	float: left;
+	width: 80px;
+	text-align: right;
+	padding: 5px 0 0
+}
+
+.user_ed_msg dd {
+	margin-left: 90px
+}
+
+.user_ed_msg .ued_w {
+	width: 430px
+}
+
+.mp_instu {
+	padding: 40px 40px 20px
+}
+
+.mp_seld dl {
+	margin-bottom: 15px
+}
+
+.mp_seld dt {
+	float: left;
+	width: 135px;
+	text-align: right;
+	padding: 5px 0 0
+}
+
+.mp_seld dd {
+	margin-left: 145px;
+	line-height: 28px
+}
+
+.mp_seld dd .js_ak a {
+	display: inline-block;
+	padding: 5px 15px;
+	border: 1px solid #ddd;
+	background: #fff;
+	color: #666;
+	margin: 0 10px 10px 0
+}
+
+.mp_seld dd .js_ak a:hover {
+	background: #f24143;
+	color: #fff
+}
+
+.mp_seld dd .js_ak input:checked+a {
+	background: #f24143;
+	color: #fff;
+}
+
+.dj_ns {
+	padding-left: 24px
+}
+
+.dj_ni {
+	margin-bottom: 10px
+}
+
+.dj_ns span {
+	display: inline-block;
+	margin: 5px 10px 5px 0
+}

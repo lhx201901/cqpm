@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title>图片上传</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="../../html-css/base.css" />
+<link rel="stylesheet" href="../../html-css/upload/upload.css" />
+<link rel="stylesheet" type="text/css" href="../../plug/alert/esayAlert.css" />
+<style type="text/css">
+			#menu {
+				display: none;
+				position: absolute;
+				background-color: #FFFAF0;
+				z-index: 9999;
+				width:300px;
+			}
+			
+ 			#menu ul li {
+				list-style: none;
+				width:100%;
+				padding: 1px 1px 1px 3px;
+				margin: 0px;
+			} 
+			#menu ul li a:hover{
+				background-color:yellow;
+				cursor:pointer;
+			}
+			.up_img_jd {
+			    background: #fb5d5d;
+			    position: absolute;
+			    top: 1px;
+			    left: 1px;
+			    width: 100%;
+			    height: 100%;
+			    z-index: 10;
+			    text-align: center;
+			    color: #fff;
+			    font-size: 24px;
+			    filter: alpha(opacity=90);
+			    -moz-opacity: 0.9;
+			    -khtml-opacity: 0.9;
+			    opacity: 0.9;
+			}
+
+			.up_img_jd_s {
+				    width: 104px;
+				    text-align: center;
+				    height: 30px;
+				    line-height: 30px;
+				    display: none;
+				    position: absolute;
+				    top: 50%;
+				    left: 43%;
+				    margin: -15px 0 0 -40px;
+				}
+				
+				.up_img_jd_new{
+				    /* width: 104px; */
+				    text-align: center;
+				    height: 30px;
+				    /* line-height: 30px; */
+				    display: block;
+				    position: absolute;
+				    top: 15%;
+				    left: 15%;
+				    margin: -15px 0 0 -40px;
+				}
+			
+</style>
+</head>
+<body>
+	<div class="vcont">
+		<div class="up_img">
+			<div class="pic_li pic_li3" id="picLi">
+				<ul id="UploadImages" class="clearfix">
+					<li class="picn up_adimg_bg"><label><div class="up_adimg">点击上传图片</div>
+							<input accept="image/*" multiple="multiple" id="UploadFile"
+							hidden="hidden" type="file" /></label></li>
+				</ul>
+<!-- 				<div id="menu">
+					<div align="center" style="background-color:yellow;padding: 3px;">
+						<span style="font-size: medium;font-weight: bold;">请选择文字模板</span>
+						<span style="float:right;">关闭</span>
+					</div>
+					<ul>
+					</ul>
+				</div> -->
+			</div>
+				<div class="up_ins clearfix">
+				   <div class="clearfix">
+                    <div class="upsckd">
+						<dl>
+							<dt>文字模版：</dt>
+							<dd>
+								<select class="sct" id="selectText"></select> <!-- <i class="ico ico10"></i> -->
+							</dd>
+						</dl>
+						<dl>
+							<dt><span style="color:red;">*</span>标题：</dt>
+							<dd>
+								<input id="Title" type="text" class="text" placeholder="请输入标题" maxlength="100">
+							</dd>
+						</dl>
+
+						<dl>
+							<dt>图片地点：</dt>
+							<dd>
+								<input id="Adress" type="text" class="text" placeholder="请输入图片地点" maxlength="50">
+							</dd>
+						</dl>
+						<dl>
+							<dt><span style="color:red;">*</span>摄影作者：</dt>
+							<dd>
+								<input id="Author" type="text" class="text" placeholder="请输入摄影作者" maxlength="30">
+								<div class="authorRecord">
+									<a class="btn_c btn_clean">清空历史记录</a>
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>拍摄时间：</dt>
+							<dd>
+								<input id="CreateTime" type="text" class="text time_picker_handle" readonly="readonly"
+									placeholder="请输入拍摄时间">
+							</dd>
+						</dl>
+				</div>
+				<div class="upsckd">
+					<dl>
+						<dt><span style="color:red;">*</span>主说明：</dt>
+						<dd>
+							<textarea id="MainExplain" max=200 class="text limit_text"
+								placeholder="填写主说明" style="height: 100px"></textarea>
+							<span class="zsum">0 / 200</span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>分说明：</dt>
+						<dd>
+							<textarea id="MinorExplain" max=1000 class="text limit_text"
+								placeholder="填写分说明" style="height: 150px"></textarea>
+							<span class="zsum">0 / 1000</span>
+						</dd>
+					</dl>
+				</div>
+				 <div class="upsckd">
+						<dl>
+							<dt>图片分类：</dt>
+							<dd class="clearfix" id="picTypesSel"></dd>
+						</dl>
+						<dl>
+							<dt>图片是否公开：</dt>
+							<dd>
+								<select class="sct" id="picMjSel">
+									<!-- <option value="">请选择</option> -->
+									<option selected="selected" value="0">公开</option>
+									<option value="1">非公开</option>
+								</select> <!-- <i class="ico ico10"></i> -->
+							</dd>
+						</dl>
+						<dl>
+							<dt>布局类型：</dt>
+							<dd>
+								<select class="sct" id="picTypeSel">
+								<!-- <option value="">请选择</option> -->
+									<option selected="selected" value="0">横幅</option>
+									<option value="1">竖幅</option>
+								</select> <!-- <i class="ico ico10"></i> -->
+							</dd>
+						</dl>
+						<dl>
+							<dt>关键字：</dt>
+							<dd>
+								<div>
+									<input id="Keywords" type="text" class="text"
+										placeholder="请输入关键字（每输入一个关键词后按回车键）" maxlength="200"> <i class="ico ico16"></i>
+								</div>
+								<div id="KeywordTips" class="keyword"></div>
+							</dd>
+						</dl>
+				 </div>
+				  </div>
+				<dl>
+					<dt></dt>
+					<dd>
+						<div class="mt20" id="onUp">
+							<a class="btn btn_ok" id="savePic" onclick="picUpload()" >上传</a> 
+							<a href="#" class="btn ml10" id="saveTempText" onclick="saveTempText()">存为模板</a>
+						</div>
+						<div class="mt20" id="goUp" style="display:none;">
+							<a class="btn btn_ok" id="savePic" onclick="goUp()" >继续上传</a> 
+						</div>
+					</dd>
+				</dl>
+			</div>
+		
+			<div style="display: none;" id="TextTemplate" class="img_msg_text">
+
+			</div>
+			<div class="up_img_btn" style="display:none">
+                <a class="btn btn_ok" id="saveToUpload" onclick="saveToUpload()">上传作品</a>
+            </div>
+		</div>
+
+	</div>
+	<div id="ModalAlert" class="ui_mask">
+		<div class="ui_box">
+			<div action="close_modal" class="close">
+				<i class="ico ico9"></i>
+			</div>
+			<div class="ui_tit"></div>
+			<div class="ui_con innox"></div>
+			<div class="ui_btj" style="text-align: center;"></div>
+		</div>
+	</div>
+	<a href="#"class="btn zd"  style="position:fixed; z-index:999; bottom:0px;right:0px;font-size: large;">置&nbsp;顶</a>
+</body>
+<script src="../../plug/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../plug/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../plug//alert/esayAlert.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../plug/datepicker/laydate.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../html-js/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../html-js/upload/upload.js" type="text/javascript" charset="utf-8"></script>
+</html>

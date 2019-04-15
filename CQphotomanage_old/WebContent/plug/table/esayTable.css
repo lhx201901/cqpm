@@ -1,0 +1,44 @@
+table.caiwu_li {
+	background: #fff;
+}
+
+table.caiwu_li {
+	width: 100%
+}
+
+table.caiwu_li th {
+	font-weight: bold;
+}
+
+table.caiwu_li th,
+.caiwu_li td {
+	padding: 15px 5px;
+	border: 1px solid #ddd;
+	border-width: 1px 0;
+	text-align: left;
+}
+
+table.caiwu_li tr.even{
+	background: #edf8ff;
+}
+
+table.caiwu_li tr:hover td {
+	border-color: #ffd8d8;
+	background: #fff8f8
+}
+
+table.caiwu_li tr:hover a {
+	color: red
+}
+
+table.caiwu_li td a:hover {
+	text-decoration: underline
+}
+
+table.caiwu_li tr.over td {
+	color: #999
+}
+
+table.caiwu_li tr.over td a {
+	color: #999
+}

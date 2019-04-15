@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title>组图/图片详情页</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="../../html-css/base.css" />
+<link rel="stylesheet" type="text/css" href="../../plug/alert/esayAlert.css" />
+<link rel="stylesheet" type="text/css" href="../../html-css/pics/picDetail.css" />
+</head>
+<script src="../../plug/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../plug/alert/esayAlert.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../html-js/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../html-js/pageToDiv.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../html-js/pics/picDetail.js" type="text/javascript" charset="utf-8"></script>
+<body>
+	<div class="vcont">
+
+		<div class="ed_gkp">
+			<div class="ed_nkl search clearfix">
+						<div class="nk_sel">
+							<select class="custom_select" id="search_type_one" style="width: 110px;height: 42px;">
+								<option value="all">全部</option>
+								<option value="新闻图片">新闻图片</option>
+								<option value="故事图片">故事图片</option>
+								<option value="重要图片">重要图片</option>
+								<option value="艺术图片">艺术图片</option>
+								<option value="历史图片">历史图片</option>
+								<option value="新华图片">新华图片</option>
+								<option value="机构图片">机构图片</option>
+							</select>
+							<!-- <i class="ico ico26"></i> -->
+						</div>
+						<div class="ser_box">
+							<input type="text" class="text" placeholder="输入关键字或图片ID"  id="searchW_words">
+							<i class="ico ico8" onclick="searchData()"></i>
+						</div>
+						<!-- <a id="SuperSearch" href="void:javascript;" class="ser_most">高级检索</a> -->
+					</div>
+		</div>
+		<div class="pic_vst pic_vst2">
+			<div class="vtpdl vtpdl2 clearfix">
+				<div class="vt_maximg" >
+					<div class="vt_dl_img" >
+						<!-- <img src="images/mp_03.jpg"> -->
+					</div>
+					 <div class="vt_dl_minimg">
+                    	<div class="vt_lt"><i class="ico icolt" ></i></div>
+                        <div class="vt_rt"><i class="ico icort"></i></div>
+                    	<ul>
+                        </ul>
+                        <input type="hidden" id="pageNum" value="1"/>
+                        <input type="hidden" id="allPage" value=""/>
+                    </div>
+				</div>
+				<div class="zutu_img">
+					<!-- <p class="zi_ti">晚霞漫天金秋满山</p>
+					<p class="zi_fi">分说明</p>
+					<p class="zi_ci">晚霞漫天金秋满山，作者:郑宇，如需帮助，请联系客服QQ：2230623082
+						企业电话：023-6390722晚霞漫天金秋满山，作者:郑宇，如需帮助</p>
+					<div class="zi_mg">
+						<p>
+							<span>图片地点：</span>重庆市渝中区解放碑
+						</p>
+						<p>
+							<span>摄影作者：</span>杨晓倩
+						</p>
+						<p>
+							<span>拍摄时间：</span>2018年05月21日 13:25:00
+						</p>
+						<p>
+							<span>上传者：</span>杨晓倩
+						</p>
+					</div>
+					<p class="zi_ex">图片EXIF提取数据</p>
+					<div class="zi_tab">
+						<table>
+							<tr>
+								<td>分辨率: 4032x3024</td>
+								<td>曝光时间: 1/80</td>
+							</tr>
+							<tr>
+								<td>大小: 4M</td>
+								<td>ISO速度：1000</td>
+							</tr>
+							<tr>
+								<td>相机型号: 尼康D7000</td>
+								<td>焦距: 4</td>
+							</tr>
+							<tr>
+								<td>光圈值: 1.8</td>
+								<td></td>
+							</tr>
+						</table>
+					</div>
+					<div class="mt30">
+						<a href="#" class="btn btn_ok">下载图片</a> <a href="#"
+							class="btn ml10">加入预选</a>
+					</div> -->
+				</div>
+			</div>
+			<div class="pic_in_info">
+				<!-- <div class="f16 mb10">主说明</div>
+				<div class="gray9 mt10">本网站所有图片及影视素材均由本公司或版权所有人授权发布，如果您侵犯了该图片素材或影视素材的知识产权，北京全景视觉网络科技股份有限公司有权依据著作权侵权惩罚性赔偿标准或最高达50万元人民币的法定标准要求赔偿，且有权不以本网站发布
+					的图片授权价格作为参考标准,本网站所有图片及影视素材均由本公司或版权所有人授权发布，如果您侵犯了该图片素材或影视素材的知识产权，北京全景视觉网络科技股份有限公司有权依据著作权侵权惩罚性赔偿标准或最高达50万元人民币的法定标准要求赔偿，且有权不以本网站发布的图片授权价格作为参考标准
+				</div>
+				<div class="smpa">
+					<span>图片分类:</span> <a href="#">全部图片</a><u>></u> <a href="#">新闻图片</a><u>></u>
+					<a href="#">风景</a>
+				</div>
+				<div class="key_wd">
+					<span>关键词:</span> <a href="#">风景</a> <a href="#">歌剧院</a> <a
+						href="#">早晨</a> <a href="#">企业</a> <a href="#">阳光</a> <a href="#">建筑</a>
+				</div> -->
+			</div>
+			<div class="pic_list clearfix">
+				<div class="pic_li pic_li2 my_up_img">
+					<ul id="ImageList" class="clearfix">
+					
+					</ul>
+				</div>
+				<div class="pic_in_edal" id="pic_in_del">
+					<span>
+						<label>
+							<input id="CheckedAll" type="checkbox">
+							全选
+						</label>
+					</span>
+					<a onclick="batchSavePre()" class="btn ml10">加入预选</a>
+				</div>
+<!-- 				<div class="pic_in_edal">
+					<span>
+						<label>
+							<input id="CheckedAll" type="checkbox">
+							全选
+						</label>
+					</span>
+					<a onclick="batchDownYt()" class="btn btn_ok ml20">下载图片</a>
+					<a onclick="batchSavePre()" class="btn ml10">加入预选</a>
+				</div> -->
+				<div class="page" id="page_div">
+					<a class="page-operate page-first">首页</a>
+					<a class="page-operate page-pre">上一页</a>
+					<span>当前第</span>
+					<span class="page-current">1</span>
+					<span>页共</span>
+					<span class="page-all">1</span>
+					<span>页</span>
+					<a class="page-operate page-next">下一页</a>
+					<a class="page-operate page-last">尾页</a>
+					<input type="text" class="text" id="pageText" onkeyup="value=value.replace(/[^\d]/g,'')">
+					<button class="go">GO</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="ModalAlert" class="ui_mask">
+		<div class="ui_box">
+			<div action="close_modal" class="close">
+				<i class="ico ico9"></i>
+			</div>
+			<div class="ui_tit"></div>
+			<div class="ui_con innox"></div>
+			<div class="ui_btj" style="text-align: center;"></div>
+		</div>
+	</div>
+	<a href="#"class="btn zd"  style="position:fixed; z-index:999; bottom:0px;right:0px;font-size: large;">置&nbsp;顶</a>
+</body>
+
+</html>

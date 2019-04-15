@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title>视觉重庆--图片管理系统</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="../../html-css/base.css" />
+<link rel="stylesheet" href="../../plug/alert/esayAlert.css" />
+<link rel="stylesheet" href="../../html-css/textTemplate/textTemplate.css" />
+</head>
+<script src="../../plug/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../plug/alert/esayAlert.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../html-js/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../html-js/pageToDiv.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../html-js/textTemplate/textTemplate.js" type="text/javascript" charset="utf-8"></script>
+<body>
+	<div class="vcont">
+		<div class="ed_gkp">
+			<div class="ed_nkl clearfix">
+				<div class="ed_msl">
+					<a class="cur">我的模版</a> <a >参考模版</a>
+				</div>
+			</div>
+		</div>
+		<div class="pic_li pic_li4">
+			<ul id="TempList" class="clearfix"></ul>
+		</div>
+		<div class="page">
+			<a class="page-operate page-first">首页</a> 
+			<a class="page-operate page-pre">上一页</a>
+			<span>当前第</span><span class="page-current">1</span>
+			<span>页共</span><span class="page-all">1</span><span>页</span>
+			<a class="page-operate page-next">下一页</a> 
+			<a class="page-operate page-last">尾页</a> 
+			<input type="text" class="text" id="pageText" onkeyup="value=value.replace(/[^\d]/g,'')" >
+			<button class="go">GO</button>
+		</div>
+	</div>
+	<div id="ModalAlert" class="ui_mask">
+		<div class="ui_box">
+			<div action="close_modal" class="close">
+				<i class="ico ico9"></i>
+			</div>
+			<div class="ui_tit"></div>
+			<div class="ui_con innox"></div>
+			<div class="ui_btj" style="text-align: center;"></div>
+		</div>
+	</div>
+	<a href="#"class="btn zd"  style="position:fixed; z-index:999; bottom:0px;right:0px;font-size: large;">置&nbsp;顶</a>
+</body>
+
+</html>
